@@ -1,0 +1,23 @@
+// Add this at the end of the file
+.hero {
+  position: relative;
+  height: 400px;
+  background: url('banner.jpg') center/cover no-repeat;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}

@@ -1,0 +1,32 @@
+<%# <h1>All Lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <%# <li><%= link_to list.name, list_path(list) %>
+    <%# </li> %>
+  <%# <% end %>
+<%# </ul>
+
+<%= link_to "Create a New List", new_list_path, class: "btn btn-primary" %>
+
+<div class="hero">
+  <h1 class="hero-title">Save any kind of movies</h1>
+  <p class="hero-subtitle">Classic</p>
+</div>
+
+<div class="container my-5">
+  <h2 class="section-title">My Lists</h2>
+  <div class="list-grid">
+    <% @lists.each do |list| %>
+      <div class="list-card">
+        <%= link_to list_path(list) do %>
+          <div class="list-card-image">
+            <img src="https://via.placeholder.com/300x200.png?text=<%= list.name %>" alt="<%= list.name %>" />
+          </div>
+          <div class="list-card-title"><%= list.name %></div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Create a movie list", new_list_path, class: "btn btn-success" %>
+</div>
